@@ -24,6 +24,8 @@ vim.opt.signcolumn = 'yes'
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>fe', vim.cmd.Ex)
+
 vim.keymap.set('n', '<A-d>', '<C-d>zz')
 vim.keymap.set('n', '<A-u>', '<C-u>zz')
 
@@ -118,7 +120,10 @@ require('lazy').setup({
             vim.keymap.set('n', '<leader>ff', builtin.current_buffer_fuzzy_find, {})
             vim.keymap.set('n', '<leader>sd', function()
                 builtin.find_files({cwd = utils.buffer_dir()})
-            end,{})
+            end, {})
+            vim.keymap.set('n', '<leader>sc', function()
+                builtin.find_files({cwd="~/.config/nvim"})
+            end, {})
         end
     },
     {
