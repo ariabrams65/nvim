@@ -17,7 +17,7 @@ return {
             vim.keymap.set('n', '<leader>sc', function()
                 builtin.find_files({cwd="~/.config/nvim"})
             end, {})
-            vim.keymap.set('n', '<leader>s~', function()
+            vim.keymap.set('n', '<leader>sa', function()
                 builtin.find_files({cwd="~"})
             end, {})
         end
